@@ -1,0 +1,14 @@
+{% extends '_layouts/cp' %}
+
+{% set title = 'Queue'|t %}
+
+{% set content %}
+	<form method="post" action="">
+		<input type="hidden" name="action" value="queue/test" />
+		<input type="hidden" name="redirect" value="queue" />
+
+		<div class="buttons">
+			<input type="submit" class="btn submit" value="{{ 'Test Queue'|t }}">
+		</div>
+	</form>
+{% endset %}
