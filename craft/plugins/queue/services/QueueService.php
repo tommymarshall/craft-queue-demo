@@ -50,8 +50,8 @@ class QueueService extends BaseApplicationComponent
 		Queue::push('SendEmail', array('message' => $message));
 	}
 
-	public function marshall()
+	public function marshal()
 	{
-		Queue::marshall();
+		Queue::marshal();
 	}
 }
