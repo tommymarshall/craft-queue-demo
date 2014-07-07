@@ -8,11 +8,6 @@ use \Illuminate\Queue\Capsule\Manager as Queue;
 
 class SendEmail {
 
-	public function __construct()
-	{
-		QueuePlugin::log('CONSTRUCT!', LogLevel::Info, true);
-	}
-
 	public function fire($job, $data)
 	{
 		QueuePlugin::log('Pretend to send email with data (INFO): ' . $data['message'], LogLevel::Info, true);
@@ -52,7 +47,7 @@ class QueueService extends BaseApplicationComponent
 	public function run()
 	{
 		$message = 'This is my awesome message';
-		Queue::push('SendEmail', array('message' => $message));
+		Queue::push('Craft\SendEmail', array('message' => $message));
 	}
 
 	public function marshal()
