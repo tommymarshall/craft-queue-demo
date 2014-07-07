@@ -39,6 +39,7 @@ class QueueService extends BaseApplicationComponent
 		$this->queue->getContainer()->bind('encrypter', function() {
 			return new \Illuminate\Encryption\Encrypter('foobar');
 		});
+
 		$this->queue->getContainer()->bind('request', function() {
 			return new \Illuminate\Http\Request();
 		});

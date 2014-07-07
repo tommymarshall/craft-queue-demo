@@ -7,8 +7,6 @@ class QueueVariable
 	{
 		$response = craft()->queue->marshall();
 
-		QueuePlugin::log('Response: ' . $response, LogLevel::INFO);
-
 		return $response;
 	}
 }
