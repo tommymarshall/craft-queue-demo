@@ -3,9 +3,9 @@ namespace Craft;
 
 class QueueVariable
 {
-	public function marshall()
+	public function marshal()
 	{
-		$response = craft()->queue->marshall();
+		$response = craft()->queue->marshal();
 
 		return $response;
 	}
