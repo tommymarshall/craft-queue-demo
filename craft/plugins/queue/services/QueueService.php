@@ -10,9 +10,7 @@ class SendEmail {
 
 	public function fire($job, $data)
 	{
-		QueuePlugin::log('Pretend to send email with data: ' . $data['message']);
-		QueuePlugin::log('Pretend to send email with data (WARNING): ' . $data['message'], LogLevel::Warning);
-		QueuePlugin::log('Pretend to send email with data (INFO): ' . $data['message'], LogLevel::Info);
+		QueuePlugin::log('Pretend to send email with data (INFO): ' . $data['message'], LogLevel::Info, true);
 	}
 
 }
