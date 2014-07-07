@@ -46,6 +46,7 @@ class QueueService extends BaseApplicationComponent
 
 	public function run()
 	{
+		QueuePlugin::log('run...', LogLevel::Info, true);
 		$message = 'This is my awesome message';
 		Queue::push('Craft\SendEmail', array('message' => $message));
 	}
