@@ -52,6 +52,7 @@ class QueueService extends BaseApplicationComponent
 
 	public function marshal()
 	{
-		Queue::marshal();
+		QueuePlugin::log('Queue::marshal()', LogLevel::Info, true);
+		return Queue::marshal();
 	}
 }
